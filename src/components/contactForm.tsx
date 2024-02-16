@@ -17,7 +17,7 @@ export default function ContactForm() {
   }
   const [formData, setFormData] = useState(initialFormData);
   const [displayMsg, setDisplayMsg] = useState(false);
-  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyz32cXnYs3BYginphfpelYZXr6Dy5HD1MKrS4wkq8ADABr6hnT29BY405jTET2j4wk_w/exec'
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz9NSVIAXZv5z2XLZNats4xGaq3w9gg-_MlD6nq-OXYqJc8u6t_EZ2H6SjVu6v2UEqlMQ/exec'
   
   const handleSubmit = async (e: any) => {
     console.log('handleSubmit', formData);

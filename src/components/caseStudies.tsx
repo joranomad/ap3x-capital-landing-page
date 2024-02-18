@@ -48,7 +48,7 @@ function CaseStudies() {
         fill="#E3E8EF"
         className="absolute top-0 w-full translate-y-[-50%] "
       />
-      <h1 className="text-3xl mb-4 font-bold w-full py-5 text-center">
+      <h1 className="text-4xl sm:text-5xl mb-4 font-bold w-full py-5 text-center">
         Case studies
       </h1>
       <div

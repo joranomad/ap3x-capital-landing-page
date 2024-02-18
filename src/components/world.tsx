@@ -171,7 +171,7 @@ const Card = (props: {
     <div
       ref={containerRef}
       className={cn(
-        "relative z-10 flex border border-white  md:min-w-[400px] flex-col max-w-[80vw] gap-2 md:max-w-max rounded-lg items-center justify-center bg-white/30 p-10",
+        "relative z-10 flex border border-white  md:min-w-[400px] flex-col max-w-[80vw] gap-2 md:max-w-[45vw] rounded-lg items-center justify-center bg-white/30 p-10",
         props.className
       )}
     >
@@ -188,7 +188,7 @@ const Card = (props: {
 };
 const IntroData = [
   {
-    title: "What UVP of AP3X is?",
+    title: "Our Unique Value Proposition",
     description: [
       "Strong team with robust & agile investment processes",
       "Research & thesis driven tapped into the pulse of the markets",
@@ -196,11 +196,9 @@ const IntroData = [
     ],
   },
   {
-    title: "What AP3X Capital is ?",
+    title: "Discover AP3X Capital",
     description: [
-      "We are a multi-strategy crypto fund",
-      "Focused on liquid market",
-      "Strategic allocation to Private investements",
+      "We are a multi-strategy crypto fund focused on liquid market strategic allocation to Private investements",
     ],
   },
 ];
@@ -231,7 +229,7 @@ const IntroDuctionSection = React.forwardRef<HTMLDivElement, {}>(
 );
 const BenifitsData = [
   {
-    title: "  Partnering with us",
+    title: "Collaborate with AP3X",
     description: [
       "Incubation & development",
       "Multi-stage investing & growth ",
@@ -239,7 +237,7 @@ const BenifitsData = [
     ],
   },
   {
-    title: "Investing with us ",
+    title: "Why Invest in Ap3x?",
     description: ["Multi-strategy ", "Asymmetric returns ", "Risk control"],
   },
 ];

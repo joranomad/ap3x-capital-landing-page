@@ -188,17 +188,17 @@ const Card = (props: {
 };
 const IntroData = [
   {
+    title: "Discover AP3X Capital",
+    description: [
+      "We are a multi-strategy crypto fund focused on liquid market strategic allocation to Private investements",
+    ],
+  },
+  {
     title: "Our Unique Value Proposition",
     description: [
       "Strong team with robust & agile investment processes",
       "Research & thesis driven tapped into the pulse of the markets",
       "Multi-channel information sources & close collaborators",
-    ],
-  },
-  {
-    title: "Discover AP3X Capital",
-    description: [
-      "We are a multi-strategy crypto fund focused on liquid market strategic allocation to Private investements",
     ],
   },
 ];
@@ -212,7 +212,7 @@ const IntroDuctionSection = React.forwardRef<HTMLDivElement, {}>(
       >
         {IntroData.map((data, index) => (
           <Card
-            className={index % 2 ? "mr-auto" : "ml-auto"}
+            className={index % 2 ? "ml-auto" : "mr-auto"}
             key={index}
             title={data.title}
           >
@@ -229,16 +229,16 @@ const IntroDuctionSection = React.forwardRef<HTMLDivElement, {}>(
 );
 const BenifitsData = [
   {
+    title: "Why Invest in Ap3x?",
+    description: ["Multi-strategy ", "Asymmetric returns ", "Risk control"],
+  },
+  {
     title: "Collaborate with AP3X",
     description: [
       "Incubation & development",
       "Multi-stage investing & growth ",
       "Partnerships & distribution",
     ],
-  },
-  {
-    title: "Why Invest in Ap3x?",
-    description: ["Multi-strategy ", "Asymmetric returns ", "Risk control"],
   },
 ];
 
@@ -250,7 +250,7 @@ const Benifits = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
     >
       {BenifitsData.map((data, index) => (
         <Card
-          className={index % 2 ? "mr-auto" : "ml-auto"}
+          className={index % 2 ? "ml-auto" : "mr-auto"}
           key={index}
           title={data.title}
         >

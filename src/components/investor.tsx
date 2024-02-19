@@ -18,7 +18,7 @@ export default function InvestorView({ investors }: { investors: Investor[] }) {
     <div className="flex flex-col gap-5 items-center py-4 relative bg-white">
       <Slant className="absolute top-0 w-full translate-y-[-49%] " />
       <p className="text-4xl sm:text-5xl font-bold mb-4 sm:mb-6">Portfolio</p>
-      <div className="grid gap-2 gap-y-16 grid-cols-4 w-[90vw] max-w-2xl">
+      <div className="grid gap-2 gap-y-8 grid-cols-4 w-[90vw] max-w-2xl">
         {investors.map((investor, index) => (
           <div key={investor.id + index} className="flex justify-center">
             <a className="" href={investor.href ? investor.href : "#"}>

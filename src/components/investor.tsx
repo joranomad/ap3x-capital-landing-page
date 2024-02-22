@@ -11,11 +11,6 @@ export default function InvestorView() {
       <p className="text-4xl sm:text-5xl font-bold mb-4 sm:mb-6">Our Thesis</p>
       <div className="grid gap-2 gap-y-8 grid-cols-4 w-[90vw] max-w-2xl">
       </div>
-      <a className="my-5" href={paths.investments}>
-        <Button className="inline-flex items-center text-lg m-4 p-4 h-5">
-          View More
-        </Button>
-      </a>
     </div>
   );
 }

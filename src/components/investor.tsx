@@ -10,20 +10,20 @@ export default function InvestorView() {
       <Slant className="absolute top-0 w-full translate-y-[-49%] " />
       <p className="text-4xl sm:text-5xl font-bold mb-4 sm:mb-6">Our Thesis</p>
       <div className="mx-auto lg:max-w-[70%] sm:max-w-[90%] flex flex-wrap mb-6">
-        <div className="flex items-center mx-3 lg:mx-6 mb-6">
-          <img src={"./assets/thesis/secondAI.png"} className="h-10 lg:h-20 mr-2"></img>
+        <div className="flex flex-col items-center mx-3 lg:mx-6 mb-6">
+          <img src={"./assets/thesis/secondAI.png"} className="h-10 lg:h-20 mb-3"></img>
           <div className="text-base lg:text-xl font-bold">d/AI</div>
         </div>
-        <div className="flex items-center mx-3 lg:mx-6 mb-6">
-          <img src={"./assets/thesis/console.png"} className="h-10 lg:h-20 mr-2"></img>
+        <div className="flex flex-col items-center mx-3 lg:mx-6 mb-6">
+          <img src={"./assets/thesis/console.png"} className="h-10 lg:h-20 mb-3"></img>
           <div className="text-base lg:text-xl font-bold">Gaming</div>
         </div>
-        <div className="flex items-center mx-3 lg:mx-6 mb-6">
-          <img src={"./assets/thesis/chain.png"} className="h-10 lg:h-20 mr-2"></img>
+        <div className="flex flex-col items-center mx-3 lg:mx-6 mb-6">
+          <img src={"./assets/thesis/chain.png"} className="h-10 lg:h-20 mb-3"></img>
           <div className="text-base lg:text-xl font-bold">On-Chain</div>
         </div>
-        <div className="flex items-center mx-3 lg:mx-6 mb-6">
-          <img src={"./assets/thesis/worldwide.png"} className="h-10 lg:h-20 mr-2"></img>
+        <div className="flex flex-col items-center mx-3 lg:mx-6 mb-6">
+          <img src={"./assets/thesis/worldwide.png"} className="h-10 lg:h-20 mb-3"></img>
           <div className="text-base lg:text-xl font-bold">Ecosystems</div>
         </div>
       </div>

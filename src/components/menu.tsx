@@ -12,10 +12,10 @@ const menuItems = [
     name: "Home",
     href: paths.root,
   },
-  {
-    name: "Investments",
-    href: paths.investments,
-  },
+  // {
+  //   name: "Investments",
+  //   href: paths.investments,
+  // },
   {
     name: "Research",
     href: paths.research,

@@ -9,7 +9,7 @@ function Research() {
     <Container className="px-4">
       <>
         <Banner text="Research" />
-        <SearchBar />
+        {/* <SearchBar /> */}
         <ResearchView data={cardItems} />
       </>
     </Container>

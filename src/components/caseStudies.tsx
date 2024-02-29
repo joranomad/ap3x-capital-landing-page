@@ -26,7 +26,7 @@ function CaseStudies() {
     () => {
       const sections = gsap.utils.toArray(sectionsRef.current);
       gsap.to(sections, {
-        xPercent: -100 * sections.length,
+        xPercent: -80 * sections.length, // Decrease the sensitivity by changing the value here
         ease: "none",
         scrollTrigger: {
           trigger: containerRef.current,
@@ -34,8 +34,8 @@ function CaseStudies() {
           scrub: 1,
           start: "top 12%",
           // markers: true,
-          snap: 1 / sections.length,
-          end: () => "+=" + Number(containerRef.current?.offsetWidth),
+          // snap: 1 / sections.length,
+          end: () => "+=" + (Number(containerRef.current?.offsetWidth) - 1000),
         },
       });
     },

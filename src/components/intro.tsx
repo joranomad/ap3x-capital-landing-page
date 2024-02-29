@@ -67,7 +67,7 @@ function Model({
   const { camera } = useThree();
 
   useEffect(() => {
-    camera.fov = 40;
+    // camera.fov = 40;
     camera.near = 0.1;
     camera.far = 2000;
     camera.position.set(0, -5, 20);

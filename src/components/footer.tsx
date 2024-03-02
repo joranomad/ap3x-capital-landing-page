@@ -23,14 +23,14 @@ const RenderSocial = ({
 
 function Footer() {
   return (
-    <footer className="flex items-center bg-foreground gap-10 p-8 md:p-16 lg:p-4 text-background">
-      <a href="/" target="_blank" rel="noreferrer">
+    <footer className="flex flex-wrap items-center bg-foreground gap-10 p-8 md:p-16 lg:p-4 text-background">
+      <a href="/" target="_blank" rel="noreferrer" className="md:block hidden">
         X
       </a>
       <RenderSocial icon="akar-icons:linkedin-fill" link="/" text="LINKEDIN" />
       <RenderSocial icon="akar-icons:medium-fill" link="/" text="MEDIUM" />
       <div className="flex-1" />
-      <a href="/" target="_blank" rel="noreferrer">
+      <a href="/" className="md:block hidden" target="_blank" rel="noreferrer">
         :
       </a>
     </footer>

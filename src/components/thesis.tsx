@@ -65,19 +65,19 @@ const data = [
     icon: "streamline:ai-chip-spark-solid",
     title: "d/AI",
     description:
-      "AI investing has limited proxies in traditional financial markets (MSFT & NVDA), AI x Crypto presents undervalued opportunities. Valuation of Crypto AI is still (bold this: ~33x) away from Web2 counterparts",
+      "AI investing has limited proxies in traditional financial markets (MSFT & NVDA), AI x Crypto presents undervalued opportunities. Valuation of Crypto AI is still 33x away from Web2 counterparts.",
   },
   {
     icon: "fa6-solid:gamepad",
     title: "Gaming",
     description:
-      "The GameFi sector has steady growth and strong support, with tremendous profiles, and fastest retail adoption. Additionally, a groundbreaking shift is underway as titans of the traditional gaming world—Ubisoft, Blizzard, Sony, Nexon, and Square Enix—embrace blockchain technology.",
+      "The GameFi sector has steady growth and strong support, with tremendous profiles, and fastest retail adoption. Additionally, a groundbreaking shift is underway as titans of the traditional gaming world — Ubisoft, Blizzard, Sony, Nexon, and Square Enix — embrace blockchain technology.",
   },
   {
     icon: "system-uicons:chain",
     title: "On-Chain",
     description:
-      "On-Chain tokens provide the highest upside potential, with clear catalysts, and numerous trackable liquidity inflow events",
+      "On-Chain tokens provide the highest upside potential, with clear catalysts, and numerous trackable liquidity inflow events.",
   },
   {
     icon: "solar:earth-bold",

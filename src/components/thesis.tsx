@@ -9,47 +9,50 @@ import gsap from "gsap";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { Card, CardContent, CardHeader } from "./ui/card";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Thesis() {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const IconRef = React.useRef<HTMLDivElement[]>([]);
-  useGSAP(
-    () => {
-      gsap.fromTo(
-        IconRef.current,
-        { opacity: 0, y: 100 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 2,
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top 80%",
-            end: "bottom 20%",
-            scrub: 1,
-            // markers: true,
-          },
-        }
-      );
-    },
-    { scope: containerRef }
-  );
+  // useGSAP(
+  //   () => {
+  //     gsap.fromTo(
+  //       IconRef.current,
+  //       { opacity: 0, y: 100 },
+  //       {
+  //         opacity: 1,
+  //         y: 0,
+  //         duration: 2,
+  //         scrollTrigger: {
+  //           trigger: containerRef.current,
+  //           start: "top 80%",
+  //           end: "bottom 20%",
+  //           scrub: 1,
+  //           // markers: true,
+  //         },
+  //       }
+  //     );
+  //   },
+  //   { scope: containerRef }
+  // );
   return (
     <div
       ref={containerRef}
       className="flex flex-col gap-5 items-center py-4 pb-32 relative bg-white"
     >
       <Slant className="absolute top-0 w-full translate-y-[-49%] " />
-      <p className="text-4xl sm:text-5xl font-bold mb-4 sm:mb-6">Our Thesis</p>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16">
+      <p className="text-4xl sm:text-4xl font-bold mb-4 sm:mb-6">Our Thesis</p>
+      <div className="grid grid-cols-1 lg:grid-cols-2">
         {data.map((d, i) => (
-          <IconSet
-            ref={(el) => el && IconRef.current.push(el)}
+          <CardSet
+            // ref={(el) => el && IconRef.current.push(el)}
             key={i}
             icon={d.icon}
             title={d.title}
-            className="gap-3"
+            description={d.description}
+            index={i}
+            className=""
           />
         ))}
       </div>
@@ -61,18 +64,26 @@ const data = [
   {
     icon: "streamline:ai-chip-spark-solid",
     title: "d/AI",
+    description:
+      "AI investing has limited proxies in traditional financial markets (MSFT & NVDA), AI x Crypto presents undervalued opportunities. Valuation of Crypto AI is still (bold this: ~33x) away from Web2 counterparts",
   },
   {
     icon: "fa6-solid:gamepad",
     title: "Gaming",
+    description:
+      "The GameFi sector has steady growth and strong support, with tremendous profiles, and fastest retail adoption. Additionally, a groundbreaking shift is underway as titans of the traditional gaming world—Ubisoft, Blizzard, Sony, Nexon, and Square Enix—embrace blockchain technology.",
   },
   {
     icon: "system-uicons:chain",
     title: "On-Chain",
+    description:
+      "On-Chain tokens provide the highest upside potential, with clear catalysts, and numerous trackable liquidity inflow events",
   },
   {
     icon: "solar:earth-bold",
     title: "Ecosystems",
+    description:
+      "Ecosystems are strong sources of alpha, with enhanced beta returns on top of underlying native currencies.",
   },
 ];
 
@@ -83,26 +94,30 @@ interface IconSetProps
   > {
   icon: string;
   title: string;
+  index: number;
+  description: string;
 }
-const IconSet = React.forwardRef<HTMLDivElement, IconSetProps>(
-  ({ icon, title, className, ...props }, ref) => (
-    <div
-      {...props}
-      ref={ref}
+const CardSet = React.forwardRef<HTMLDivElement, IconSetProps>(
+  ({ icon, title, className, index, description, ...props }, ref) => (
+    <Card
       className={cn(
-        "flex group flex-col items-center  text-foreground/60 hover:text-foreground/100 transition-all ease-in-out ",
+        "max-w-lg p-10 border border-foreground rounded-none flex flex-col items-center justify-center aspect-square transition-all duration-300",
+        "md:border-t-0 border-primary",
+        index % 2 === 0 ? "border-l-0" : "border-r-0",
+        index < 2 ? "md:border-t-0" : "md:border-b-0",
+        "hover:from-primary/10 hover:to-background/10 hover:bg-gradient-to-r hover:via-primary/10 ",
+        index % 2 === 0 && "hover:bg-gradient-to-l",
         className
       )}
+      ref={ref}
     >
-      <Icon
-        icon={icon}
-        width="3rem"
-        height="3rem"
-        className="group-hover:scale-125 cursor-pointer transition-all ease-in-out duration-100   "
-      />
-      <div className="text-base lg:text-md  group-hover:scale-125 cursor-pointer transition-all ease-in-out duration-100">
-        {title}
-      </div>
-    </div>
+      <CardHeader>
+        <Icon icon={icon} className="text-5xl h-10 mb-4 w-full  text-primary" />
+        <p className="text-2xl w-full font-semibold">{title}</p>
+      </CardHeader>
+      <CardContent>
+        <p className=" text-center text-md">{description}</p>
+      </CardContent>
+    </Card>
   )
 );

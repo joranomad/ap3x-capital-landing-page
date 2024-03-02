@@ -39,7 +39,7 @@ export default function Thesis() {
   return (
     <div
       ref={containerRef}
-      className="flex flex-col gap-5 items-center py-4 pb-32 relative bg-white"
+      className="flex flex-col gap-5 items-center py-8 pt-16  pb-32 relative bg-white"
     >
       <Slant className="absolute top-0 w-full translate-y-[-49%] " />
       <p className="text-4xl sm:text-4xl font-bold mb-4 sm:mb-6">Our Thesis</p>

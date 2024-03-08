@@ -65,13 +65,13 @@ const data = [
     icon: "streamline:ai-chip-spark-solid",
     title: "d/AI",
     description:
-      "AI investing has limited proxies in traditional financial markets (MSFT & NVDA), AI x Crypto presents undervalued opportunities. Valuation of Crypto AI is still 33x away from Web2 counterparts.",
+      "Web2 AI has limited investable proxies in traditional financial markets, trading at trillion-dollar valuations. <br/> d/AI presents numerous opportunities, trading at <strong> <5% </strong> of privately held web2 AI companies.",
   },
   {
     icon: "fa6-solid:gamepad",
     title: "Gaming",
     description:
-      "The GameFi sector has steady growth and strong support, with tremendous profiles, and fastest retail adoption. Additionally, a groundbreaking shift is underway as titans of the traditional gaming world — Ubisoft, Blizzard, Sony, Nexon, and Square Enix — embrace blockchain technology.",
+      "GameFi is poised to capture significant retail attention and flows. A groundbreaking shift is underway as titans of the traditional gaming world — Ubisoft, Blizzard, Sony, Nexon, and Square Enix — embrace blockchain technology.",
   },
   {
     icon: "system-uicons:chain",
@@ -116,7 +116,10 @@ const CardSet = React.forwardRef<HTMLDivElement, IconSetProps>(
         <p className="text-2xl w-full font-semibold">{title}</p>
       </CardHeader>
       <CardContent>
-        <p className=" text-center text-md">{description}</p>
+        <p
+          className=" text-center text-md"
+          dangerouslySetInnerHTML={{ __html: description }}
+        ></p>
       </CardContent>
     </Card>
   )

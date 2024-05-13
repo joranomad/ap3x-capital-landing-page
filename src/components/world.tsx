@@ -229,7 +229,7 @@ const IntroDuctionSection = React.forwardRef<HTMLDivElement, {}>(
 );
 const BenifitsData = [
   {
-    title: "Why Invest in Ap3x?",
+    title: "Why Invest in AP3X?",
     description: ["Multi-strategy ", "Asymmetric returns ", "Risk control"],
   },
   {

@@ -17,7 +17,7 @@ export default function ContactForm() {
   }
   const [formData, setFormData] = useState(initialFormData);
   const [displayMsg, setDisplayMsg] = useState(false);
-  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz9NSVIAXZv5z2XLZNats4xGaq3w9gg-_MlD6nq-OXYqJc8u6t_EZ2H6SjVu6v2UEqlMQ/exec'
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyQMJrJBETnSzKKY9t2bC2_44Lq9165VU3JrfTS1fn2-xEYQG_8mdzcsT4u61yRadG2/exec'
   
   const handleSubmit = async (e: any) => {
     console.log('handleSubmit', formData);
@@ -42,7 +42,7 @@ export default function ContactForm() {
         <CardDescription className="text-xl line-clamp-3">
           Get in touch
         </CardDescription>
-        {displayMsg && <p>Success Message</p>}
+        {displayMsg && <p>We have received your message request and will be in touch shortly!</p>}
           <div className="bg-white p-4 rounded-md flex items-center mt-5 mb-5">
             <Icon icon="material-symbols-light:account-circle" className="text-secondary-foreground cursor-pointer text-2xl" />
             <input

@@ -96,7 +96,7 @@ function CaseStudies() {
               </Card>
             </CarouselItem>
           ))}
-          <CarouselItem
+          {/* <CarouselItem
             className=" min-w-[100vw] max-w-[100vw] flex items-center justify-center"
             ref={(el) => {
               if (!el) return;
@@ -115,7 +115,7 @@ function CaseStudies() {
                 </a>
               </CardContent>
             </Card>
-          </CarouselItem>
+          </CarouselItem> */}
         </CarouselContent>
         <CarouselPrevious className="left-10" />
         <CarouselNext className="right-10" />

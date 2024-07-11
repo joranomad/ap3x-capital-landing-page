@@ -29,7 +29,7 @@ function Footer() {
       </a> */}
       <RenderSocial icon="akar-icons:x-fill" link="https://x.com/ap3xcapital" text="TWITTER" />
       <RenderSocial icon="akar-icons:linkedin-fill" link="https://linkedin.com/company/ap3x-capital" text="LINKEDIN" />
-      <RenderSocial icon="akar-icons:medium-fill" link="/" text="MEDIUM" />
+      {/* <RenderSocial icon="akar-icons:medium-fill" link="/" text="MEDIUM" /> */}
       <div className="flex-1" />
       <a href="/" className="md:block hidden" target="_blank" rel="noreferrer">
         :

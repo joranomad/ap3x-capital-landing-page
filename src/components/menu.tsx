@@ -13,7 +13,7 @@ const menuItems = [
     href: paths.root,
   },
   {
-    name: "About",
+    name: "About Us",
     href: paths.about,
   },
   {

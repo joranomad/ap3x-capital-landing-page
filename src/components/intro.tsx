@@ -19,13 +19,13 @@ function Intro({ id }: { id: string }) {
       <h1 className="relative z-[1] text-6xl md:text-8xl xl:text-[12rem] text-center font-bold">
         AP3X CAPITAL
       </h1>
-      <a href="/contact">
+      <a href="/about">
         <Button
           variant="default"
           size="lg"
           className="relative z-[1] mt-4 text-lg md:text-2xl md:py-7 md:px-10 px-7"
         >
-          Let's Connect
+          About Us
         </Button>
       </a>
       <Mountain className="absolute z-0 top-0 bg-[#E3E8EF]" />

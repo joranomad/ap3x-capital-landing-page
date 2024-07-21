@@ -3,6 +3,7 @@ import { Navigate, useRoutes } from "react-router-dom";
 import { paths } from "./paths";
 
 const Home = React.lazy(() => import("@/pages/home"));
+const About = React.lazy(() => import("@/pages/about"))
 const Investments = React.lazy(() => import("@/pages/investments"));
 const Research = React.lazy(() => import("@/pages/research"));
 const Teams = React.lazy(() => import("@/pages/teams"));
@@ -16,6 +17,10 @@ const root = [
   {
     path: paths.root,
     element: <Home />,
+  },
+  {
+    path: paths.about,
+    element: <About />,
   },
   {
     path: paths.research,

@@ -29,8 +29,8 @@ export function LogoHolderBox({
         />
         <path
           d="M75.0511 100.16L2 0H458L377.155 101.538C369.376 111.308 357.569 117 345.08 117H108.177C95.0788 117 82.7692 110.742 75.0511 100.16Z"
-          stroke="#D1EBE9"
-          strokeWidth="2"
+          stroke="#5EAFF1"
+          strokeWidth="1.5"
         />
       </g>
       <defs>

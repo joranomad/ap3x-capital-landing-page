@@ -88,7 +88,7 @@ function CaseStudies() {
                   </CardDescription>
                   {/* <p className="text-lg my-4 ">Date: {item.date}</p> */}
                   <a href={item.link} className="text-lg underline ">
-                    <Button className=" font-semibold rounded-none px-6 py-6 hover:bg-foreground hover:text-background transition-all duration-300 my-4">
+                    <Button className=" font-semibold rounded-none px-6 py-6 hover:bg-foreground hover:text-background transition-all duration-300 my-4 text-white">
                       Read more
                     </Button>
                   </a>

@@ -23,7 +23,7 @@ function Intro({ id }: { id: string }) {
         <Button
           variant="default"
           size="lg"
-          className="relative z-[1] mt-4 text-lg md:text-2xl md:py-7 md:px-10 px-7"
+          className="relative z-[1] mt-4 text-lg md:text-2xl md:py-7 md:px-10 px-7 text-white"
         >
           About Us
         </Button>

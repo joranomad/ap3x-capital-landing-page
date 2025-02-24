@@ -190,7 +190,7 @@ const IntroData = [
   {
     title: "Discover AP3X Capital",
     description: [
-      "We are a multi-strategy crypto fund focused on liquid market strategic allocation to Private investements",
+      "We are a multi-strategy crypto fund focused on liquid market strategic allocation to Private Investments",
     ],
   },
   {

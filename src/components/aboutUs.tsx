@@ -21,7 +21,7 @@ export default function AboutUs() {
         </p>
         <div className="text-left">
           <p className="mb-6">
-            We employ a mixed liquid-venture strategy that provides us the flexibility to capture market dislocations. Our investment strategy is chain and sector agnostic and we invest in companies across multiple chains and verticals across the web3 space.
+            We adopt a multi-strategy approach that provides us the flexibility to capture market dislocations. Our investment strategy is chain and sector agnostic and we invest in companies across multiple chains and verticals across the web3 space.
           </p>
           <p className="mb-6">
             We also incubate projects from seed, to listings, and activate post-listing catalysts. Our hands-on approach to incubation allows us to guide portfolio projects from technical to operational aspects.

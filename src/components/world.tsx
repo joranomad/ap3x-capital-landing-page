@@ -19,7 +19,7 @@ export default function World() {
   const modelPosition = [0, 0, 0];
   const containerRef = useRef<HTMLDivElement>(null);
   const introRef = useRef<HTMLDivElement>(null);
-  const benifitsRef = useRef<HTMLDivElement>(null);
+  // const benifitsRef = useRef<HTMLDivElement>(null);
 
   return (
     <div
@@ -27,7 +27,7 @@ export default function World() {
       className=" world-container relative bg-background  w-full overflow-hidden"
     >
       <IntroDuctionSection ref={introRef} />
-      <Benifits ref={benifitsRef} />
+      {/* <Benifits ref={benifitsRef} /> */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-background to-transparent">
         <Canvas
           className={cn("absolute top-0 h-full w-screen ")}
@@ -36,7 +36,7 @@ export default function World() {
           <Model
             containerRef={containerRef}
             introRef={introRef}
-            benifitsRef={benifitsRef}
+            // benifitsRef={benifitsRef}
             url={"mesh/globe.glb"}
           />
         </Canvas>
@@ -49,12 +49,12 @@ const Model = ({
   url,
   containerRef,
   introRef,
-  benifitsRef,
+  // benifitsRef,
 }: {
   url: string;
   containerRef: React.RefObject<HTMLDivElement>;
   introRef: React.RefObject<HTMLDivElement>;
-  benifitsRef: React.RefObject<HTMLDivElement>;
+  // benifitsRef: React.RefObject<HTMLDivElement>;
 }) => {
   const { scene } = useGLTF(url);
 
@@ -145,6 +145,7 @@ const Card = (props: {
         start: "top 80%",
         end: "bottom 20%",
         scrub: true,
+        invalidateOnRefresh: true,
         // markers: true,
         // immediateRender: false,
       });
@@ -201,33 +202,6 @@ const IntroData = [
       "Multi-channel information sources & close collaborators",
     ],
   },
-];
-
-const IntroDuctionSection = React.forwardRef<HTMLDivElement, {}>(
-  (props, ref) => {
-    return (
-      <div
-        ref={ref}
-        className="flex px-10 md:px-32 flex-col gap-10 justify-center min-h-screen w-full "
-      >
-        {IntroData.map((data, index) => (
-          <Card
-            className={index % 2 ? "ml-auto" : "mr-auto"}
-            key={index}
-            title={data.title}
-          >
-            {data.description.map((desc, index) => (
-              <p key={index} className="text-left">
-                {desc}
-              </p>
-            ))}
-          </Card>
-        ))}
-      </div>
-    );
-  }
-);
-const BenifitsData = [
   {
     title: "Why Invest in AP3X?",
     description: ["Multi-strategy ", "Asymmetric returns ", "Risk control"],
@@ -242,25 +216,72 @@ const BenifitsData = [
   },
 ];
 
-const Benifits = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
-  return (
-    <div
-      ref={ref}
-      className="flex flex-col gap-10 px-10 md:px-32  min-h-screen w-full "
-    >
-      {BenifitsData.map((data, index) => (
-        <Card
-          className={index % 2 ? "ml-auto" : "mr-auto"}
-          key={index}
-          title={data.title}
-        >
-          {data.description.map((desc, index) => (
-            <p key={index} className="text-center">
-              {desc}
-            </p>
-          ))}
-        </Card>
-      ))}
-    </div>
-  );
-});
+const IntroDuctionSection = React.forwardRef<HTMLDivElement, {}>(
+  (props, ref) => {
+    return (
+      <div
+        ref={ref}
+        className="flex px-10 md:px-32 flex-col gap-10 justify-center pt-10 pb-10 min-h-screen w-full "
+      >
+        {IntroData.map((data, index) => (
+          <Card
+            className={cn(
+              "w-full max-w-[90%] sm:max-w-[70%] md:max-w-[60%] lg:max-w-[45%]",
+              index % 2 === 0 ? "mr-auto" : "ml-auto"
+            )}
+          
+            key={index}
+            title={data.title}
+          >
+            {data.description.map((desc, index) => (
+              <p key={index} className="text-left">
+                {desc}
+              </p>
+            ))}
+          </Card>
+        ))}
+      </div>
+    );
+  }
+);
+
+// const BenifitsData = [
+//   {
+//     title: "Why Invest in AP3X?",
+//     description: ["Multi-strategy ", "Asymmetric returns ", "Risk control"],
+//   },
+//   {
+//     title: "Collaborate with AP3X",
+//     description: [
+//       "Incubation & development",
+//       "Multi-stage investing & growth ",
+//       "Partnerships & distribution",
+//     ],
+//   },
+// ];
+
+// const Benifits = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
+//   return (
+//     <div
+//       ref={ref}
+//       className="flex flex-col gap-10 px-10 md:px-32 items-center min-h-screen w-full "
+//     >
+//       {BenifitsData.map((data, index) => (
+//         <Card
+//           className={cn(
+//             "w-full max-w-[90vw] sm:max-w-[300px] md:max-w-[500px] lg:max-w-[650px]",
+//             index % 2 === 0 ? "mr-auto" : "ml-auto"
+//           )}
+//           key={index}
+//           title={data.title}
+//         >
+//           {data.description.map((desc, index) => (
+//             <p key={index} className="text-center">
+//               {desc}
+//             </p>
+//           ))}
+//         </Card>
+//       ))}
+//     </div>
+//   );
+// });

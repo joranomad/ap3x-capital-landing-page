@@ -16,8 +16,8 @@ function Intro({ id }: { id: string }) {
       id={id}
       className="relative w-full gap-1  flex flex-col items-center justify-center h-[110vh] text-white"
     >
-      <h1 className="relative z-[1] text-6xl md:text-8xl xl:text-[12rem] text-center font-bold">
-        AP3X CAPITAL
+      <h1 className="relative z-[1] text-5xl md:text-8xl xl:text-[10rem] text-center font-bold">
+        Investing In Asymmetry
       </h1>
       <a href="/about">
         <Button

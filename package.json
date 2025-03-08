@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@gsap/react": "^2.1.0",
     "@hookform/resolvers": "^3.3.4",
     "@iconify/react": "^4.1.1",

@@ -5,7 +5,8 @@ import {
   CardDescription,
 } from "./ui/card";
 import { Button } from "./ui/button";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import emailjs from '@emailjs/browser';
 
 interface ContactForm {
   [fullName: string]: string,
@@ -28,8 +29,13 @@ export default function ContactForm() {
   const [formData, setFormData] = useState(initialFormData);
   const [displayMsg, setDisplayMsg] = useState(false);
   const [disabledSubmit, setDisabledSubmit] = useState(true);
-  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx1xNGAPy-wpPnaUERGkfXcvz5dPoYONMsIM78z6yLiznvGiAciUPdqpTtrF_XXBYzXfA/exec'
+  // const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx1xNGAPy-wpPnaUERGkfXcvz5dPoYONMsIM78z6yLiznvGiAciUPdqpTtrF_XXBYzXfA/exec'
   
+  // EmailJS credentials
+  const EMAILJS_PUBLIC_KEY:string = (process.env.REACT_APP_EMAILJS_PUBLIC_KEY as string);
+  const EMAILJS_SERVICE_ID:string = (process.env.REACT_APP_EMAILJS_SERVICE_ID as string);
+  const EMAILJS_TEMPLATE_ID:string = (process.env.REACT_APP_EMAILJS_TEMPLATE_ID as string);
+
   const onFormChange = (e: any) => {
     let formDataTemp = {...formData};
     formDataTemp[e.target.name] = e.target.value;
@@ -41,17 +47,23 @@ export default function ContactForm() {
   }
 
   const handleSubmit = async (e: any) => {
-    console.log('handleSubmit', formData);
-    fetch(GOOGLE_SCRIPT_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      redirect: 'follow',
-      body: JSON.stringify(formData)
-    }).then(response => {
-      console.log('Success:', response);
+    e.preventDefault(); // Prevents unnecessary reloads
+
+    try {
+      const response = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formData, // ✅ Passes an object instead of a form element
+        EMAILJS_PUBLIC_KEY
+      );
+
+      console.log("Email sent successfully!", response);
       setDisplayMsg(true);
-    }).catch(error => console.error('Error:', error));
-    setFormData(initialFormData);
+      setFormData(initialFormData); // Reset form after submission
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Failed to send email. Please try again.");
+    }
   };
   
   return (

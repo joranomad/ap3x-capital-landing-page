@@ -80,7 +80,8 @@ function ResearchView({ data }: { data: ResearchData[] }) {
                 </CardDescription>
                 {/* <p className="text-lg my-4 ">Date: {item.date}</p> */}
                 <a href={item.link} className="text-lg underline">
-                  <Button className=" rounded-none px-4  my-5 hover:bg-white/65 transition-all duration-300 ease-in-out text-white">
+                  {/* <Button className=" rounded-none px-4  my-5 hover:bg-white/65 transition-all duration-300 ease-in-out text-white"> */}
+                  <Button className=" rounded-none px-4 my-5">
                     Read more
                   </Button>
                 </a>

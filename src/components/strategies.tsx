@@ -21,8 +21,8 @@ export default function Strategies() {
       <Slant className="absolute top-0 w-full translate-y-[-49%]" />
       <p className="text-4xl sm:text-4xl font-bold mb-4 sm:mb-6">Our Strategies</p>
 
-      {/* Updated grid layout for equal distribution */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-screen-lg mx-auto">
+      {/* Grid Layout Ensuring Equal Height */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-screen-lg mx-auto auto-rows-fr">
         {data.map((d, i) => (
           <CardSet
             key={i}
@@ -48,7 +48,7 @@ const data = [
     icon: "fa6-solid:gamepad",
     title: "Gaming",
     description:
-      "The GameFi sector has steady growth and strong support, with tremendous profiles, and fastest retail adoption. A groundbreaking shift is underway as titans of the gaming world embrace blockchain technology.",
+      "The GameFi sector has steady growth and strong support, with tremendous profiles and fastest retail adoption. A groundbreaking shift is underway as titans of the gaming world embrace blockchain technology.",
   },
   {
     icon: "system-uicons:chain",
@@ -73,7 +73,7 @@ const CardSet = React.forwardRef<HTMLDivElement, IconSetProps>(
   ({ icon, title, index, description, className, ...props }, ref) => (
     <Card
       className={cn(
-        "flex-1 p-10 border border-foreground rounded-lg flex flex-col items-center justify-center aspect-square transition-all duration-300",
+        "flex flex-col items-center justify-between h-full p-10 border border-foreground rounded-lg transition-all duration-300",
         "hover:from-primary/10 hover:to-background/10 hover:bg-gradient-to-r hover:via-primary/10",
         index % 2 === 0 && "hover:bg-gradient-to-l",
         className
@@ -84,7 +84,7 @@ const CardSet = React.forwardRef<HTMLDivElement, IconSetProps>(
         <Icon icon={icon} className="text-5xl h-10 mb-4 w-full text-primary" />
         <p className="text-2xl font-semibold">{title}</p>
       </CardHeader>
-      <CardContent>
+      <CardContent className="flex-grow flex items-center">
         <p className="text-center text-md">{description}</p>
       </CardContent>
     </Card>

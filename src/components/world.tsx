@@ -189,29 +189,27 @@ const Card = (props: {
 };
 const IntroData = [
   {
-    title: "Discover AP3X Capital",
+    title: "A New Financial Infrastructure is Emerging",
     description: [
-      "We are a multi-strategy crypto fund focused on liquid market strategic allocation to Private Investments",
+      " Blockchain is not just about speculation—it’s about fundamentally rebuilding financial systems that are faster, more transparent, and globally accessible.",
     ],
   },
   {
-    title: "Our Unique Value Proposition",
+    title: "Institutional Adoption",
     description: [
-      "Strong team with robust & agile investment processes",
-      "Research & thesis driven tapped into the pulse of the markets",
-      "Multi-channel information sources & close collaborators",
+      "The emergence of spot ETFs, stablecoin regulations, and blockchain-based RWAs signals that institutions are embracing digital assets as a legitimate asset class.",
     ],
   },
   {
-    title: "Why Invest in AP3X?",
-    description: ["Multi-strategy ", "Asymmetric returns ", "Risk control"],
+    title: "On-Chain Growth",
+    description: [
+      "The next wave of blockchain adoption will be on-chain, leveraging modular chains, liquid staking, and new DeFi primitives that unlock capital efficiency."
+    ],
   },
   {
-    title: "Collaborate with AP3X",
+    title: "Regulatory Clarity",
     description: [
-      "Incubation & development",
-      "Multi-stage investing & growth ",
-      "Partnerships & distribution",
+      "As jurisdictions define clearer rules, institutional capital is flowing in, legitimizing the space and accelerating adoption.",
     ],
   },
 ];

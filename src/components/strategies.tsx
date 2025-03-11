@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { Card, CardContent, CardHeader } from "./ui/card";
+import { Color } from "three";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,22 +41,31 @@ export default function Strategies() {
 const data = [
   {
     icon: "streamline:ai-chip-spark-solid",
-    title: "d/AI",
-    description:
-      "AI investing has limited proxies in traditional financial markets (MSFT & NVDA). AI x Crypto presents undervalued opportunities. Valuation of Crypto AI is still 33x away from Web2 counterparts.",
+    title: "Venture",
+    description:[
+      "Allocating in transformative projects: Focusing on core ideas that will change the world.",
+      "Leveraging deep research: Thesis-driven investments with deep knowledge in the space.",
+      "Backing the market leaders of new verticals: Partnering with high caliber teams to assist and accelerate their progress."
+    ]
+      // "AI investing has limited proxies in traditional financial markets (MSFT & NVDA). AI x Crypto presents undervalued opportunities. Valuation of Crypto AI is still 33x away from Web2 counterparts.",
   },
   {
     icon: "fa6-solid:gamepad",
-    title: "Gaming",
-    description:
-      "The GameFi sector has steady growth and strong support, with tremendous profiles and fastest retail adoption. A groundbreaking shift is underway as titans of the gaming world embrace blockchain technology.",
+    title: "Liquid",
+    description: [
+      "Capitalising on market dislocations: in times of fear / greed etc",
+      "Asymmetric return profiles using deep research:",
+      "Institutional precision:"
+    ]
   },
   {
     icon: "system-uicons:chain",
-    title: "On-Chain",
-    description:
-      "On-Chain tokens provide the highest upside potential, with clear catalysts and numerous trackable liquidity inflow events.",
-  },
+    title: "Absolute Return",
+    description:[
+      "Consistent returns through:  selective market neutral yield and arbitrage strategies.",
+      "Arbitrage strategies through scanning for opportunistic mis-pricing.",
+      "Optimising yield by ensuring capital is never idle and always generating returns."
+    ]  },
 ];
 
 interface IconSetProps
@@ -66,7 +76,7 @@ interface IconSetProps
   icon: string;
   title: string;
   index: number;
-  description: string;
+  description: string[];
 }
 
 const CardSet = React.forwardRef<HTMLDivElement, IconSetProps>(
@@ -81,11 +91,16 @@ const CardSet = React.forwardRef<HTMLDivElement, IconSetProps>(
       ref={ref}
     >
       <CardHeader className="text-center">
-        <Icon icon={icon} className="text-5xl h-10 mb-4 w-full text-primary" />
-        <p className="text-2xl font-semibold">{title}</p>
+        {/* <Icon icon={icon} className="text-5xl h-10 mb-4 w-full text-primary" /> */}
+        <p className="text-2xl font-semibold" style={{color: '#1533C8'}}>{title}</p>
       </CardHeader>
       <CardContent className="flex-grow flex items-center">
-        <p className="text-center text-md">{description}</p>
+        {/* Render the description as bullet points */}
+        <ul className=" text-md space-y-2">
+          {description.map((point, idx) => (
+            <li key={idx} className="list-disc">{point}</li>
+          ))}
+        </ul>
       </CardContent>
     </Card>
   )

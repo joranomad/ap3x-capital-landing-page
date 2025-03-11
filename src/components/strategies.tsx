@@ -47,15 +47,14 @@ const data = [
       "Leveraging deep research: Thesis-driven investments with deep knowledge in the space.",
       "Backing the market leaders of new verticals: Partnering with high caliber teams to assist and accelerate their progress."
     ]
-      // "AI investing has limited proxies in traditional financial markets (MSFT & NVDA). AI x Crypto presents undervalued opportunities. Valuation of Crypto AI is still 33x away from Web2 counterparts.",
   },
   {
     icon: "fa6-solid:gamepad",
     title: "Liquid",
     description: [
       "Capitalising on market dislocations: in times of fear / greed etc",
-      "Asymmetric return profiles using deep research:",
-      "Institutional precision:"
+      "Asymmetric return profiles using deep research: to be updated",
+      "Institutional precision: to be updated"
     ]
   },
   {

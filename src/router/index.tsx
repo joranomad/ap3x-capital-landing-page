@@ -6,7 +6,6 @@ const Home = React.lazy(() => import("@/pages/home"));
 const About = React.lazy(() => import("@/pages/about"))
 const Investments = React.lazy(() => import("@/pages/investments"));
 const Research = React.lazy(() => import("@/pages/research"));
-const Teams = React.lazy(() => import("@/pages/teams"));
 const Contact = React.lazy(() => import("@/pages/contact"));
 
 export default function Router() {

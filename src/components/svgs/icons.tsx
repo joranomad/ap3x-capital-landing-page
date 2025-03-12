@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import { ClassValue } from "clsx";
 import React from "react";
 
 export function HamburgerIcon({
@@ -9,7 +8,6 @@ export function HamburgerIcon({
   className: string;
   variant: "light" | "dark";
 }) {
-  const [isHovered, setIsHovered] = React.useState(false);
   const [isLight, setIsLight] = React.useState(variant === "light");
 
   return (

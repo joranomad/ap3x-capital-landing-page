@@ -1,7 +1,6 @@
-import Banner from "@/components/banner";
-import ContactForm from "@/components/contactForm";
-import Container from "@/components/ui/container";
 import AboutUs from "@/components/aboutUs";
+import Banner from "@/components/banner";
+import Container from "@/components/ui/container";
 
 function About() {
   return (

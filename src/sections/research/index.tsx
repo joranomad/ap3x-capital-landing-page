@@ -1,6 +1,5 @@
 import Banner from "@/components/banner";
-import ResearchView, { ResearchData } from "@/components/research";
-import SearchBar from "@/components/searchBar";
+import ResearchView from "@/components/research";
 import Container from "@/components/ui/container";
 import { cardItems } from "@/constants";
 

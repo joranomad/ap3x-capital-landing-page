@@ -1,25 +1,21 @@
-import React, { Children, useRef } from "react";
+import { cn } from "@/lib/utils";
+import { useGSAP } from "@gsap/react";
+import { useGLTF } from "@react-three/drei";
 import {
   Canvas,
-  GroupProps,
-  ThreeElements,
-  useThree,
+  useThree
 } from "@react-three/fiber";
-import { OrbitControls, useGLTF } from "@react-three/drei";
 import { ClassValue } from "clsx";
-import { cn } from "@/lib/utils";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useRef } from "react";
 import { Separator } from "./ui/separator";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function World() {
-  const modelPosition = [0, 0, 0];
   const containerRef = useRef<HTMLDivElement>(null);
   const introRef = useRef<HTMLDivElement>(null);
-  // const benifitsRef = useRef<HTMLDivElement>(null);
 
   return (
     <div
@@ -27,7 +23,6 @@ export default function World() {
       className=" world-container relative bg-background  w-full overflow-hidden"
     >
       <IntroDuctionSection ref={introRef} />
-      {/* <Benifits ref={benifitsRef} /> */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-background to-transparent">
         <Canvas
           className={cn("absolute top-0 h-full w-screen ")}
@@ -48,35 +43,18 @@ export default function World() {
 const Model = ({
   url,
   containerRef,
-  introRef,
-  // benifitsRef,
 }: {
   url: string;
   containerRef: React.RefObject<HTMLDivElement>;
   introRef: React.RefObject<HTMLDivElement>;
-  // benifitsRef: React.RefObject<HTMLDivElement>;
 }) => {
   const { scene } = useGLTF(url);
 
   const three = useThree();
   const { camera } = three;
-  const threeScene = three.scene;
-
-  const containerScrollTrigger = ScrollTrigger.create({
-    trigger: containerRef.current,
-    start: "top center",
-    end: "bottom top",
-    scrub: true,
-    // markers: true,
-  });
 
   useGSAP(
     () => {
-      // gsap.set(camera.position, { y: -1, z: 20 });
-      // gsap.set(scene.rotation, { y: 10 });
-      // gsap.set(camera.position, { y: 2, z: 15 });
-      // gsap.set(scene.rotation, { y: 20 });
-      // console.log(camera.position);
       gsap.fromTo(
         camera.position,
         { y: -1.5, z: 5 },
@@ -88,7 +66,6 @@ const Model = ({
             start: "top center",
             end: "bottom top",
             scrub: true,
-            // markers: true,
           },
         }
       );
@@ -146,8 +123,6 @@ const Card = (props: {
         end: "bottom 20%",
         scrub: true,
         invalidateOnRefresh: true,
-        // markers: true,
-        // immediateRender: false,
       });
       gsap.from(containerRef.current, {
         y: 100,
@@ -242,44 +217,3 @@ const IntroDuctionSection = React.forwardRef<HTMLDivElement, {}>(
     );
   }
 );
-
-// const BenifitsData = [
-//   {
-//     title: "Why Invest in AP3X?",
-//     description: ["Multi-strategy ", "Asymmetric returns ", "Risk control"],
-//   },
-//   {
-//     title: "Collaborate with AP3X",
-//     description: [
-//       "Incubation & development",
-//       "Multi-stage investing & growth ",
-//       "Partnerships & distribution",
-//     ],
-//   },
-// ];
-
-// const Benifits = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
-//   return (
-//     <div
-//       ref={ref}
-//       className="flex flex-col gap-10 px-10 md:px-32 items-center min-h-screen w-full "
-//     >
-//       {BenifitsData.map((data, index) => (
-//         <Card
-//           className={cn(
-//             "w-full max-w-[90vw] sm:max-w-[300px] md:max-w-[500px] lg:max-w-[650px]",
-//             index % 2 === 0 ? "mr-auto" : "ml-auto"
-//           )}
-//           key={index}
-//           title={data.title}
-//         >
-//           {data.description.map((desc, index) => (
-//             <p key={index} className="text-center">
-//               {desc}
-//             </p>
-//           ))}
-//         </Card>
-//       ))}
-//     </div>
-//   );
-// });

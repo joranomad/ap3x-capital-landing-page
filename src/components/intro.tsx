@@ -1,12 +1,12 @@
-import React, { useEffect, useRef } from "react";
-import { Canvas, useThree } from "@react-three/fiber";
-import { OrbitControls, useGLTF, PerspectiveCamera } from "@react-three/drei";
-import { Button } from "./ui/button";
-import { ClassValue } from "clsx";
 import { cn } from "@/lib/utils";
-import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { useGLTF } from "@react-three/drei";
+import { Canvas, useThree } from "@react-three/fiber";
+import { ClassValue } from "clsx";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useEffect, useRef } from "react";
+import { Button } from "./ui/button";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,7 +37,6 @@ function Intro({ id }: { id: string }) {
 export default Intro;
 
 function Mountain({ className }: { className?: ClassValue }) {
-  const modelPosition = [0, 0, 0];
   const containerRef = useRef<HTMLDivElement>(null);
   return (
     <div

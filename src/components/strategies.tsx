@@ -1,18 +1,14 @@
-import React from "react";
-import { Slant } from "./svgs/slant";
-import { Icon } from "@iconify/react";
 import { cn } from "@/lib/utils";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+import React from "react";
+import { Slant } from "./svgs/slant";
 import { Card, CardContent, CardHeader } from "./ui/card";
-import { Color } from "three";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Strategies() {
   const containerRef = React.useRef<HTMLDivElement>(null);
-  const IconRef = React.useRef<HTMLDivElement[]>([]);
 
   return (
     <div
@@ -90,11 +86,9 @@ const CardSet = React.forwardRef<HTMLDivElement, IconSetProps>(
       ref={ref}
     >
       <CardHeader className="text-center">
-        {/* <Icon icon={icon} className="text-5xl h-10 mb-4 w-full text-primary" /> */}
         <p className="text-2xl font-semibold" style={{color: '#1533C8'}}>{title}</p>
       </CardHeader>
       <CardContent className="flex-grow flex items-center">
-        {/* Render the description as bullet points */}
         <ul className=" text-md space-y-2">
           {description.map((point, idx) => (
             <li key={idx} className="list-disc">{point}</li>

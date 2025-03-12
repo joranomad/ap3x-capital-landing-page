@@ -1,4 +1,3 @@
-import React, { useRef } from "react";
 import {
   Card,
   CardContent,
@@ -6,15 +5,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { TextPlugin } from "gsap/TextPlugin";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { cn } from "@/lib/utils";
-import { Slant } from "./svgs/slant";
-import { Button } from "./ui/button";
-import { renderWithLineBreaks } from "@/lib/lineBreak";
-import { cardItems } from "@/constants";
 import {
   Carousel,
   CarouselContent,
@@ -22,33 +12,18 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { cardItems } from "@/constants";
+import { renderWithLineBreaks } from "@/lib/lineBreak";
 import Autoplay from "embla-carousel-autoplay";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TextPlugin } from "gsap/TextPlugin";
+import { Slant } from "./svgs/slant";
+import { Button } from "./ui/button";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 function CaseStudies() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const sectionsRef = useRef<HTMLDivElement[]>([]);
-
-  // useGSAP(
-  //   () => {
-  //     const sections = gsap.utils.toArray(sectionsRef.current);
-  //     gsap.to(sections, {
-  //       xPercent: -80 * sections.length, // Decrease the sensitivity by changing the value here
-  //       ease: "none",
-  //       scrollTrigger: {
-  //         trigger: containerRef.current,
-  //         pin: true,
-  //         scrub: 1,
-  //         start: "top 12%",
-  //         // markers: true,
-  //         // snap: 1 / sections.length,
-  //         end: () => "+=" + (Number(containerRef.current?.offsetWidth) - 1000),
-  //       },
-  //     });
-  //   },
-  //   { scope: containerRef }
-  // );
 
   return (
     <div className="py-10 relative bg-[#E3E8EF]">

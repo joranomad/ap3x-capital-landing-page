@@ -47,8 +47,6 @@ const InvestmentsCard: React.FC<InvestmentsProps> = ({ investments }) => {
 export default InvestmentsCard;
 
 const RenderInvestments = ({ investment }: { investment: Investment }) => {
-  const containerRef = React.useRef<HTMLDivElement>(null);
-
   return (
     <div className="flex flex-col items-center gap-2 mb-4 " key={investment.id}>
       <div className="w-16 h-16 rounded-full bg-white">

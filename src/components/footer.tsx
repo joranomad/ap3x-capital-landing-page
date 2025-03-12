@@ -1,6 +1,4 @@
-import React from "react";
 import { Icon } from "@iconify/react";
-import Container from "./ui/container";
 
 const RenderSocial = ({
   icon,

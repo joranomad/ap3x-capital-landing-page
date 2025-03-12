@@ -1,10 +1,10 @@
 import { cn } from "@/lib/utils";
-import { ClassValue } from "clsx";
-import React from "react";
-import { Card, CardContent } from "./ui/card";
 import { useGSAP } from "@gsap/react";
+import { ClassValue } from "clsx";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import React from "react";
+import { Card } from "./ui/card";
 gsap.registerPlugin(ScrollTrigger);
 
 interface Props {
@@ -28,7 +28,6 @@ const Team: React.FC<Props> = (props) => {
           trigger: cardRef.current,
           start: "top 90%",
           toggleActions: "play reverse play reverse",
-          // markers: true,
         },
         y: 300,
         ease: "power3.out",

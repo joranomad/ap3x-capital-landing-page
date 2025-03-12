@@ -1,12 +1,12 @@
+import emailjs from '@emailjs/browser';
 import { Icon } from "@iconify/react";
+import { useState } from "react";
+import { Button } from "./ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
 } from "./ui/card";
-import { Button } from "./ui/button";
-import { useRef, useState } from "react";
-import emailjs from '@emailjs/browser';
 
 interface ContactForm {
   [fullName: string]: string,

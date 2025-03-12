@@ -189,7 +189,7 @@ const Card = (props: {
 };
 const IntroData = [
   {
-    title: "A New Financial Infrastructure is Emerging",
+    title: "A New Financial Infrastructure",
     description: [
       " Blockchain is not just about speculation—it’s about fundamentally rebuilding financial systems that are faster, more transparent, and globally accessible.",
     ],
@@ -197,19 +197,19 @@ const IntroData = [
   {
     title: "Institutional Adoption",
     description: [
-      "The emergence of spot ETFs, stablecoin regulations, and blockchain-based RWAs signals that institutions are embracing digital assets as a legitimate asset class.",
+      "Blockchain is not just about speculation—it is about the emergence of spot ETFs, stablecoin regulations, and blockchain-based RWAs signals that institutions are embracing digital assets as a legitimate asset class.",
     ],
   },
   {
     title: "On-Chain Growth",
     description: [
-      "The next wave of blockchain adoption will be on-chain, leveraging modular chains, liquid staking, and new DeFi primitives that unlock capital efficiency."
+      "The next wave of blockchain adoption will be on-chain, leveraging blockchain primitives and cutting-edge developments to unlock new possibilities"
     ],
   },
   {
     title: "Regulatory Clarity",
     description: [
-      "As jurisdictions define clearer rules, institutional capital is flowing in, legitimizing the space and accelerating adoption.",
+      "As jurisdictions define clearer rules, institutional capital have been flowing in, legitimizing the space and accelerating adoption.",
     ],
   },
 ];

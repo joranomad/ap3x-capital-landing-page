@@ -43,27 +43,27 @@ const data = [
     icon: "streamline:ai-chip-spark-solid",
     title: "Venture",
     description:[
-      "Allocating in transformative projects: Focusing on core ideas that will change the world.",
-      "Leveraging deep research: Thesis-driven investments with deep knowledge in the space.",
-      "Backing the market leaders of new verticals: Partnering with high caliber teams to assist and accelerate their progress."
+      "Allocating in transformative projects: Focusing on core ideas that will change the world",
+      "Leveraging deep research: Thesis-driven investments with deep knowledge in the space",
+      "Backing the market leaders of new verticals: Partnering with high caliber teams to assist and accelerate their progress"
     ]
   },
   {
     icon: "fa6-solid:gamepad",
     title: "Liquid",
     description: [
-      "Capitalising on market dislocations: in times of fear / greed etc",
-      "Asymmetric return profiles using deep research: to be updated",
-      "Institutional precision: to be updated"
+      "Agility with a purpose: Capitalising on market dislocations during peak volatility",
+      "Asymmetric returns profile backed by fundamental research",
+      "Conviction holds and tactical allocation ensuring versatility in all market environments"
     ]
   },
   {
     icon: "system-uicons:chain",
     title: "Absolute Return",
     description:[
-      "Consistent returns through:  selective market neutral yield and arbitrage strategies.",
-      "Arbitrage strategies through scanning for opportunistic mis-pricing.",
-      "Optimising yield by ensuring capital is never idle and always generating returns."
+      "Consistent returns through:  selective market neutral yield and arbitrage strategies",
+      "Arbitrage strategies through scanning for opportunistic mis-pricing",
+      "Optimising yield by ensuring capital is never idle and always generating returns"
     ]  },
 ];
 
